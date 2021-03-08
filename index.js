@@ -16,8 +16,6 @@ app.listen('3000', function() {
     console.log(comision1);
 
 
-    cantidadDeDivisores(20)
-
 });
 
 const crearEstudiantes = () => {
@@ -40,14 +38,3 @@ const crearDocentes = () => {
     return [docente1, docente2, docente3, docente4];
 }
 
-
-const cantidadDeDivisores = (numero) => {
-    let divisores = 0
-    for (let i = 0; i < numero; i++) {
-        if (numero%i=== 0) {
-            divisores++
-            console.log(i)
-        }
-    }
-    console.log(divisores)
-}
