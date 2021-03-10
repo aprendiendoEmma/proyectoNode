@@ -7,6 +7,7 @@ const Estudiante = require('./clases/Estudiante');
 const Docente = require('./clases/Docente');
 const Comision = require('./clases/Comision');
 const Ungs = require('./clases/Ungs');
+const Persona = require('./clases/clasePersona')
 //ACA VA EL CODIGO QUE SE VA A EJECUTAR SIEMPRE!
 app.listen('3000', function() {
     const estudiantes = crearEstudiantes()
@@ -14,6 +15,7 @@ app.listen('3000', function() {
     const docentes = crearDocentes();
     const comision1 = new Comision('programacion1', 1, docentes, estudiantes, califaciones);
     console.log(comision1);
+
 
 
 });
@@ -38,3 +40,7 @@ const crearDocentes = () => {
     return [docente1, docente2, docente3, docente4];
 }
 
+
+
+const persona1 = new Persona('emmanuel', 23);
+const persona2 = new Persona('marcos', 22);
