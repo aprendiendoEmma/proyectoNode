@@ -7,18 +7,22 @@ const Estudiante = require('./clases/Estudiante');
 const Docente = require('./clases/Docente');
 const Comision = require('./clases/Comision');
 const Ungs = require('./clases/Ungs');
-const Persona = require('./clases/clasePersona');
+
 //ACA VA EL CODIGO QUE SE VA A EJECUTAR SIEMPRE!
 app.listen('3000', function() {
-    // const estudiantes = crearEstudiantes()
-    // const califaciones = [9, 7, 5, 4];
-    // const docentes = crearDocentes();
-    // const comision1 = new Comision('programacion1', 1, docentes, estudiantes, califaciones);
-    // console.log(comision1);
+    const estudiantes = crearEstudiantes();
+    const califaciones = [9, 7, 5, 4];
+    const docentes = crearDocentes();
+    const comision1 = new Comision('programacion1', 1, docentes, estudiantes, califaciones);
+    const estudiantes2 = crearEstudiantes2();
+    const docentes2 = crearDocentes2();
+    const califaciones2 = [10, 7, 3, 1];
+    const comision2 = ['programacion2', 2, docentes2, estudiantes2, califaciones2];
+    const ungs = new Ungs();
+    ungs.agregarComision(comision1)
+    ungs.agregarComision(comision2)
+    console.log(ungs)
 
-    const personas= crearPersonas();
-   
-    console.log(persona1.masJovenQue(persona2));
 });
 
 const crearEstudiantes = () => {
@@ -41,14 +45,23 @@ const crearDocentes = () => {
     return [docente1, docente2, docente3, docente4];
 }
 
+const crearEstudiantes2 = () => {
 
-const crearPersonas = () => {
+    const estudiante1 = new Estudiante('estudiante1', 1234);
+    const estudiante2 = new Estudiante('estudiante2', 3454);
+    const estudiante3= new Estudiante('estudiante3', 5674);
+    const estudiante4 = new Estudiante('estudiante4', 7894);
 
-    const persona1 = new Persona('emmanuel', 23);
-    const persona2 = new Persona('gabriel', 22);    
-    const persona3 = new Persona('jose', 24);
-    const persona4 = new Persona('marcos', 22);
-
-    return [persona1, persona2, persona3, persona4];
-
+    return [estudiante1,estudiante2,estudiante3,estudiante4];
 }
+
+const crearDocentes2 = () => {
+
+    const docente1 = new Docente('docente5', 1234566);
+    const docente2 = new Docente('docente6', 1234566);
+    const docente3 = new Docente('docente7', 1234566);
+    const docente4 = new Docente('docente8', 1234566);
+
+    return [docente1, docente2, docente3, docente4];
+}
+
