@@ -7,17 +7,18 @@ const Estudiante = require('./clases/Estudiante');
 const Docente = require('./clases/Docente');
 const Comision = require('./clases/Comision');
 const Ungs = require('./clases/Ungs');
-const Persona = require('./clases/clasePersona')
+const Persona = require('./clases/clasePersona');
 //ACA VA EL CODIGO QUE SE VA A EJECUTAR SIEMPRE!
 app.listen('3000', function() {
-    const estudiantes = crearEstudiantes()
-    const califaciones = [9, 7, 5, 4];
-    const docentes = crearDocentes();
-    const comision1 = new Comision('programacion1', 1, docentes, estudiantes, califaciones);
-    console.log(comision1);
+    // const estudiantes = crearEstudiantes()
+    // const califaciones = [9, 7, 5, 4];
+    // const docentes = crearDocentes();
+    // const comision1 = new Comision('programacion1', 1, docentes, estudiantes, califaciones);
+    // console.log(comision1);
 
-
-
+    const personas= crearPersonas();
+   
+    console.log(persona1.masJovenQue(persona2));
 });
 
 const crearEstudiantes = () => {
@@ -41,6 +42,13 @@ const crearDocentes = () => {
 }
 
 
+const crearPersonas = () => {
 
-const persona1 = new Persona('emmanuel', 23);
-const persona2 = new Persona('marcos', 22);
+    const persona1 = new Persona('emmanuel', 23);
+    const persona2 = new Persona('gabriel', 22);    
+    const persona3 = new Persona('jose', 24);
+    const persona4 = new Persona('marcos', 22);
+
+    return [persona1, persona2, persona3, persona4];
+
+}

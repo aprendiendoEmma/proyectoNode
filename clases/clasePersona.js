@@ -26,6 +26,17 @@ class Persona {
         }
         return false
     }
+     
+    static masJoven(grupo) {
+        let masjoven = grupo[0]
+        grupo.forEach(element => {
+            if (element.edad < grupo.edad) {
+                masjoven = element
+                
+            }
+        });
+    }
+
 }
 
 
