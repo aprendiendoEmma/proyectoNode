@@ -21,8 +21,7 @@ app.listen('3000', function() {
     const ungs = new Ungs();
     ungs.agregarComision(comision1, comision2);
     
-   console.log(ungs.cursaCon(estudiantes[0], docentes2[2]));
-
+    console.log(ungs.losMejores())
 
 
 });
@@ -67,10 +66,10 @@ const crearDocentes2 = () => {
     return [docente1, docente2, docente3, docente4];
 }
 
-const crearCienDocentes = () => {
-    const docentes = []
-    for (let i = 0; i < 100; i++) {
-        docentes.push[new Estudiante('vision',12342)]
-    }
-    return docentes;
-}
+// const crearCienEstudiantes= () => {
+//     const estudiantes = []
+//     for (let i = 0; i < 70; i++) {
+//         estudiantes.push[new Estudiante('vision',12342)]
+//     }
+//     return estudiantes;
+// }

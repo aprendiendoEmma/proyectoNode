@@ -17,4 +17,21 @@ module.exports = class Comision {
     estaDocente(docente) {
         return this.docentes.includes(docente);
     }
+
+    cantidadEstudiantes() {
+        return this.estudiantes.length
+    }
+
+    cantidadDeDocentes() {
+        return this.docentes.length
+    }
+
+    estudiantesConLaNotaMasAlta() {
+   
+        const masAlta = Math.max.apply( null, this.califaciones)
+
+        return this.estudiantes[this.califaciones.indexOf(masAlta)]
+    }
 }
+
+

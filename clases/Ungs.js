@@ -23,4 +23,24 @@ module.exports = class Ungs {
         return estanJuntos
     }
 
+    // suficientesDocentes() {
+    //     let suficientesDocentes2 = true
+
+    //     this.comisiones.forEach(comision => {
+    //         if (comision.cantidadEstudiantes() >=20  comision.cantidadDeDocentes()
+    //             suficientesDocentes2 = suficientesDocentes2 && false
+    //     });
+
+    //     return suficientesDocentes2 
+    // }
+
+
+    losMejores () {
+        let losMejores = []
+        this.comisiones.forEach(comision => {
+
+        losMejores.push(comision.estudiantesConLaNotaMasAlta());
+        });
+        return losMejores
+    }
 }
