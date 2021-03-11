@@ -9,4 +9,12 @@ module.exports = class Comision {
         this.estudiantes = estudiantes;
         this.califaciones =califaciones;
     }
+
+    estaEstudiante(estudiante) {
+       return this.estudiantes.includes(estudiante);  
+    }
+
+    estaDocente(docente) {
+        return this.docentes.includes(docente);
+    }
 }

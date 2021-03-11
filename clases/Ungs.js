@@ -5,7 +5,22 @@ module.exports = class Ungs {
         this.comisiones = [];
     }
 
-    agregarComision(comision) {
-        this.comisiones.push(comision);
+    agregarComision(...comision) {
+        comision.forEach(element => {
+            this.comisiones.push(element)
+        });
     }
+
+    cursaCon(estudiante, docente) {
+        let estanJuntos = false
+        this.comisiones.forEach(comision => {
+            if(comision.estaEstudiante(estudiante) && comision.estaDocente(docente)){
+                estanJuntos = estanJuntos || true
+            } else{
+                estanJuntos = estanJuntos || false
+            }
+        });
+        return estanJuntos
+    }
+
 }
