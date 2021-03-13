@@ -11,7 +11,7 @@ const Ungs = require('./clases/Ungs');
 //ACA VA EL CODIGO QUE SE VA A EJECUTAR SIEMPRE!
 app.listen('3000', function() {
     const estudiantes = crearEstudiantes();
-    const califaciones = [9, 7, 5, 4];
+    const califaciones = [0, 10, 10, 4];
     const docentes = crearDocentes();
     const comision1 = new Comision('programacion1', 1, docentes, estudiantes, califaciones);
     const estudiantes2 = crearEstudiantes2();
@@ -21,7 +21,8 @@ app.listen('3000', function() {
     const ungs = new Ungs();
     ungs.agregarComision(comision1, comision2);
     
-    console.log(ungs.losMejores())
+    console.log(ungs.alumnosDe(docentes[0]))
+
 
 
 });
@@ -66,10 +67,12 @@ const crearDocentes2 = () => {
     return [docente1, docente2, docente3, docente4];
 }
 
-// const crearCienEstudiantes= () => {
-//     const estudiantes = []
-//     for (let i = 0; i < 70; i++) {
-//         estudiantes.push[new Estudiante('vision',12342)]
-//     }
-//     return estudiantes;
-// }
+const crearCienEstudiantes= () => {
+    const estudiantes = []
+    for (let i = 0; i < 200; i++) {
+        const estudiante1 = new Estudiante('estudiante1', 1234);
+        estudiantes.push(estudiante1)
+    }
+
+    return estudiantes;
+}

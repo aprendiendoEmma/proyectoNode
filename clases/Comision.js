@@ -28,10 +28,27 @@ module.exports = class Comision {
 
     estudiantesConLaNotaMasAlta() {
    
-        const masAlta = Math.max.apply( null, this.califaciones)
+        const masAlta = Math.max.apply( null, this.califaciones);
+        const posCalificaciones = [];
+        const mejoresEstudiantes = [];
+        let pos = 0;
 
-        return this.estudiantes[this.califaciones.indexOf(masAlta)]
+        this.califaciones.forEach(cal => {
+            if(cal === masAlta){ 
+                posCalificaciones.push(pos)
+            }
+            pos++;
+        })
+
+        posCalificaciones.forEach(pos => {
+            mejoresEstudiantes.push(this.estudiantes[pos])
+        })
+
+        return mejoresEstudiantes
     }
+
+
+    
 }
 
 

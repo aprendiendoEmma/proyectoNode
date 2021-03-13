@@ -23,24 +23,37 @@ module.exports = class Ungs {
         return estanJuntos
     }
 
-    // suficientesDocentes() {
-    //     let suficientesDocentes2 = true
-
-    //     this.comisiones.forEach(comision => {
-    //         if (comision.cantidadEstudiantes() >=20  comision.cantidadDeDocentes()
-    //             suficientesDocentes2 = suficientesDocentes2 && false
-    //     });
-
-    //     return suficientesDocentes2 
-    // }
+    suficientesDocentes() {
+        let haySuficientesDoc = true
+        this.comisiones.forEach(comision => {
+            let docTendriaQueHaber = comision.cantidadEstudiantes() / 20;
+            console.log(docTendriaQueHaber)
+            if(comision.cantidadDeDocentes() < docTendriaQueHaber )
+                haySuficientesDoc = haySuficientesDoc && false
+        
+        });
+        
+        return haySuficientesDoc
+    }
 
 
     losMejores () {
         let losMejores = []
         this.comisiones.forEach(comision => {
 
-        losMejores.push(comision.estudiantesConLaNotaMasAlta());
+            losMejores.push(...comision.estudiantesConLaNotaMasAlta());
         });
         return losMejores
+    }
+
+    alumnosDe(docente) {
+        const estud = new Set();
+        this.comisiones.forEach(comision => {
+            if (comision.docentes.includes(docente)) {
+                estud.add(comision.estudiantes)
+            }
+        });
+
+        return [...estud];
     }
 }
