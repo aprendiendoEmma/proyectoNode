@@ -11,6 +11,8 @@ const tripulantes = require('./clases/tripulantes');
 const avion = require('./clases/avion');
 const Vuelo = require ('./clases/vuelo');
 const aerolineas = require ('./clases/aerolineas');
+const Tripulante = require('./clases/tripulantes');
+const Avion = require('./clases/avion');
 //ACA VA EL CODIGO QUE SE VA A EJECUTAR SIEMPRE!
 app.listen('3000', function() {
     // const estudiantes = crearEstudiantes();
@@ -23,8 +25,10 @@ app.listen('3000', function() {
     // const comision2 = new Comision('programacion2', 2, docentes2, estudiantes2, califaciones2);
     // const ungs = new Ungs();
     // ungs.agregarComision(comision1, comision2);
-    
     // console.log(ungs.alumnosDe(docentes[0]))
+
+
+
 
 
 
@@ -78,3 +82,11 @@ app.listen('3000', function() {
 //     }
 
 //     return estudiantes;
+
+
+const tripulante1 = new Tripulante('emmanuel', 'piloto', '15');
+const tripulante2 = new Tripulante('marcos', 'copiloto', '7');
+const tripulante3 = new Tripulante('guille', 'aeromozo', '2');
+
+
+const avion = new Avion = ('comercial', 200);

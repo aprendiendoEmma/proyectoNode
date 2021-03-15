@@ -5,4 +5,11 @@ module.exports =  class Vuelo {
         this.avion = avion;
         this.tripulantes = [];
     }
+
+    vuelosEn(){
+        
+    }
+
+
 }
+
