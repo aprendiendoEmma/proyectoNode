@@ -78,10 +78,3 @@ app.listen('3000', function() {
 
 //     return estudiantes;
 
-
-// const tripulante1 = new Tripulante('emmanuel', 'piloto', '15');
-// const tripulante2 = new Tripulante('marcos', 'copiloto', '7');
-// const tripulante3 = new Tripulante('guille', 'aeromozo', '2');
-
-
-// const avion = new Avion = ('comercial', 200);
