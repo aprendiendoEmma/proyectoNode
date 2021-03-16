@@ -23,9 +23,10 @@ app.listen('3000', function() {
     const tripulante4 = new Tripulante ('chuchu', 'aeromozo', 5); 
     const tripulante5 = new Tripulante ('Emmmanuel','aeromozo'); 
  
-    const tripulante = crearTripulantes
-   const vuelo1 = new Vuelo(avion1,agregarTripulantes(tripulante))
-   console.log(vuelo1)
+   
+    const vuelo1 = new Vuelo(avion2)
+    vuelo1.agregarTripulantes(tripulante1)
+    console.log(vuelo1)
 
 
 
