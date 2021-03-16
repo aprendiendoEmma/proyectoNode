@@ -6,5 +6,9 @@ module.exports =  class Vuelo {
         this.tripulantes = [];
     }
 
+    agregarTripulante(tripulante) {
+        this.tripulantes.push(tripulante)
+
+    }
 }
 
