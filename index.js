@@ -7,12 +7,11 @@ app.use(express.static(__dirname + '/public/'));
 // const Docente = require('./clases/Docente');
 // const Comision = require('./clases/Comision');
 // const Ungs = require('./clases/Ungs');
-const tripulantes = require('./clases/tripulantes');
-const avion = require('./clases/avion');
-const Vuelo = require ('./clases/vuelo');
-const aerolineas = require ('./clases/aerolineas');
-const Tripulante = require('./clases/tripulantes');
-const Avion = require('./clases/avion');
+// const Tripulantes = require('./clases/Tripulantes');
+// const Avion = require('./clases/Avion');
+// const Vuelo = require ('./clases/Vuelo');
+// const Aerolineas = require ('./clases/Aerolineas');
+
 //ACA VA EL CODIGO QUE SE VA A EJECUTAR SIEMPRE!
 app.listen('3000', function() {
     // const estudiantes = crearEstudiantes();
@@ -26,10 +25,6 @@ app.listen('3000', function() {
     // const ungs = new Ungs();
     // ungs.agregarComision(comision1, comision2);
     // console.log(ungs.alumnosDe(docentes[0]))
-
-
-
-
 
 
 });
@@ -84,9 +79,9 @@ app.listen('3000', function() {
 //     return estudiantes;
 
 
-const tripulante1 = new Tripulante('emmanuel', 'piloto', '15');
-const tripulante2 = new Tripulante('marcos', 'copiloto', '7');
-const tripulante3 = new Tripulante('guille', 'aeromozo', '2');
+// const tripulante1 = new Tripulante('emmanuel', 'piloto', '15');
+// const tripulante2 = new Tripulante('marcos', 'copiloto', '7');
+// const tripulante3 = new Tripulante('guille', 'aeromozo', '2');
 
 
-const avion = new Avion = ('comercial', 200);
+// const avion = new Avion = ('comercial', 200);
