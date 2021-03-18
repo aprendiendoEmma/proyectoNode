@@ -25,7 +25,6 @@ app.listen('3000', function() {
  
    
     const vuelo1 = new Vuelo(avion2)
-    vuelo1.agregarTripulantes(tripulante1)
     console.log(vuelo1)
 
 

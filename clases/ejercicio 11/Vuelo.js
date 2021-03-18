@@ -6,10 +6,5 @@ module.exports =  class Vuelo {
         this.tripulantes = [];
     }
 
-    agregarTripulantes(lista) {
-        lista.forEach(Element => {
-            this.tripulantes.push(Element)
-        });
-    }
 }
 
