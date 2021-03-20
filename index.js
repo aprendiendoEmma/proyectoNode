@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 app.use(express.static(__dirname + '/public/'));
 //ACA VAN LAS IMPORTACIONES
-const Avion = require('./clases/ejercicio11/Avion');
-const Vuelo = require ('./clases/ejercicio11/Vuelo');
-const Aerolineas = require ('./clases/ejercicio11/Aerolineas'); 
+const Avion = require('./clases/ejercicio11/avion');
+const Vuelo = require ('./clases/ejercicio11/vuelo');
+const Aerolineas = require ('./clases/ejercicio11/aerolineas'); 
 const Tripulante = require('./clases/ejercicio11/tripulante');
 
 //ACA VA EL CODIGO QUE SE VA A EJECUTAR SIEMPRE!
@@ -25,7 +25,6 @@ app.listen('3000', function() {
      aerolineas.agregarVuelo(vuelo1);
      console.log(' RESULTADO.................................................')
     console.log(aerolineas.vuelosSobreCargados());
-
 
     
 
