@@ -7,10 +7,6 @@ app.use(express.static(__dirname + '/public/'));
 // const Docente = require('./clases/Docente');
 // const Comision = require('./clases/Comision');
 // const Ungs = require('./clases/Ungs');
-// const Tripulantes = require('./clases/Tripulantes');
-// const Avion = require('./clases/Avion');
-// const Vuelo = require ('./clases/Vuelo');
-// const Aerolineas = require ('./clases/Aerolineas');
 
 //ACA VA EL CODIGO QUE SE VA A EJECUTAR SIEMPRE!
 app.listen('3000', function() {
