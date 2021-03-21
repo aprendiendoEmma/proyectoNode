@@ -37,5 +37,26 @@ module.exports = class Aerolineas {
         });
         return listaDeVuelos;
     }
+
+    masInspeccionado() {
+        let vueloConMasInspect = this.vuelos[0]
+        this.vuelos.forEach(vuelo => {
+            if (vuelo.cantidadDeInspectores() > vueloConMasInspect.cantidadDeInspectores()) {
+                vueloConMasInspect = vuelo       
+            }
+        });
+        return vueloConMasInspect.avion.tipo
+    }
+
+    
+    avionesPiloteadosPor(nombre) {
+        let avionesPiloteados = []
+        this.vuelos.forEach(vuelo => {
+            if (vuelo.esPiloto(nombre)) {
+                avionesPiloteados.push(vuelo.avion.tipo)
+            }    
+        });
+        return avionesPiloteados
+    }
 }
 

@@ -45,4 +45,24 @@ module.exports = class Vuelo {
         });
         return cantidad
     }
+    cantidadDeInspectores() {
+        let cantidad = 0
+        this.tripulantes.forEach(tripulante => {
+            if (tripulante.cargo === 'inspector') {
+                cantidad++
+            }            
+        });
+        return cantidad
+    }
+
+    esPiloto(nombre) {
+        let estaElPiloto = false
+        this.tripulantes.forEach(tripulante => {
+            if (nombre === tripulante.nombre && tripulante.cargo === 'Piloto') {
+                estaElPiloto = estaElPiloto || true
+            }
+        });
+        return estaElPiloto
+    }
+
 }
